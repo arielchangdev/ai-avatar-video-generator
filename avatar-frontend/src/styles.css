@@ -1,0 +1,174 @@
+:root {
+  --bg: #0f1117;
+  --panel: #1a1d29;
+  --accent: #5b8def;
+  --text: #e6e8ee;
+  --muted: #9aa0ad;
+  --error: #ff6b6b;
+  --ok: #4caf82;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: -0.5rem;
+}
+
+.upload-field {
+  background: var(--panel);
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.upload-field label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.upload-field input[type="file"],
+.upload-field textarea {
+  width: 100%;
+  color: var(--text);
+}
+
+.upload-field textarea {
+  background: #0f1117;
+  border: 1px solid #2a2e3c;
+  border-radius: 8px;
+  color: var(--text);
+  padding: 0.6rem;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.file-name {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.upload-ok {
+  color: var(--ok);
+  font-size: 0.85rem;
+}
+
+.char-counter {
+  text-align: right;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.char-counter.over-limit {
+  color: var(--error);
+}
+
+.field-errors {
+  color: var(--error);
+  font-size: 0.85rem;
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.pending-items {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.summary {
+  background: #12261d;
+  border: 1px solid #1f4a37;
+  border-radius: 10px;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.confirm-button,
+.new-task-button,
+.progress-display button,
+.downloads button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7rem 1.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.confirm-button:disabled {
+  background: #394152;
+  cursor: not-allowed;
+}
+
+.progress-display {
+  background: var(--panel);
+  padding: 1.25rem;
+  border-radius: 10px;
+}
+
+.progress-bar-track {
+  background: #0f1117;
+  border-radius: 999px;
+  height: 14px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  background: var(--accent);
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.progress-display.error {
+  border: 1px solid var(--error);
+}
+
+.video-result {
+  background: var(--panel);
+  padding: 1.25rem;
+  border-radius: 10px;
+}
+
+.video-result .preview {
+  width: 100%;
+  border-radius: 8px;
+  background: black;
+}
+
+.downloads {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.expiry-note {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.new-task-button {
+  margin-top: 1.5rem;
+  background: transparent;
+  border: 1px solid var(--accent);
+}

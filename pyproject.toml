@@ -1,0 +1,17 @@
+[project]
+name = "ai-avatar-video-generator"
+version = "1.0.0"
+description = "本地零費用 AI 虛擬人物影片生成系統 (FastAPI + Celery + React)"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+markers = [
+    "property: Property-based tests using Hypothesis",
+    "unit: Unit tests for individual components",
+    "integration: Integration tests requiring GPU or external services",
+]
+
+[tool.hypothesis]
+database_backend = "directory"

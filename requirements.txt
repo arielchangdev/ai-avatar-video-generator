@@ -1,0 +1,35 @@
+﻿# AI Avatar Video Generator - Dependencies
+# Install with: pip install -r requirements-avatar.txt
+
+# Web framework
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
+websockets>=12.0
+
+# Data validation
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Task queue
+celery[redis]>=5.3.0
+redis>=5.0.0
+
+# Testing
+hypothesis>=6.92.0
+pytest>=7.4.0
+pytest-asyncio>=0.23.0
+httpx>=0.25.0
+
+# Audio processing (for voice sample validation)
+soundfile>=0.12.0
+
+# Image/Video processing (for appearance asset validation)
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# AI Models (install separately based on GPU availability)
+# insightface>=0.7.3
+# onnxruntime-gpu>=1.16.0
+# torch>=2.1.0
+# torchaudio>=2.1.0

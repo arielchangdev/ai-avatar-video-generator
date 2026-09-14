@@ -1,0 +1,42 @@
+# ---- Secrets / local env ----
+.env
+.env.*
+!.env.avatar.example
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.hypothesis/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+venv/
+.venv/
+env/
+
+# ---- Node / frontend ----
+node_modules/
+avatar-frontend/dist/
+avatar-frontend/node_modules/
+*.local
+
+# ---- AI model weights (large; download separately per SETUP.md) ----
+models/
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+
+# ---- Generated task output ----
+ai-avatar-output/
+tasks/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+.idea/
+*.swp
+*.tsbuildinfo
