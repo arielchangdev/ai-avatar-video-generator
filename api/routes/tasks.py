@@ -58,7 +58,10 @@ def _map_retry_stage(value: str | None) -> TaskStage | None:
 async def create_task(
     voice_sample: UploadFile = File(...),
     appearance_asset: UploadFile = File(...),
-    script_text: str = Form(...),
+    # Default to empty so an empty script is not rejected by FastAPI field
+    # validation (422) but flows to the submission validator, which is the
+    # single source of truth for reporting missing/invalid inputs (400).
+    script_text: str = Form(""),
     retry_from_stage: str | None = Form(None),
     task_manager: TaskManager = Depends(get_task_manager),
     dispatcher: TaskDispatcher = Depends(get_task_dispatcher),

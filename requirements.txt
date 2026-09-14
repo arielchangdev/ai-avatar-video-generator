@@ -1,5 +1,5 @@
 ﻿# AI Avatar Video Generator - Dependencies
-# Install with: pip install -r requirements-avatar.txt
+# Install with: pip install -r requirements.txt
 
 # Web framework
 fastapi>=0.104.0
@@ -23,6 +23,7 @@ httpx>=0.25.0
 
 # Audio processing (for voice sample validation)
 soundfile>=0.12.0
+mutagen>=1.47.0
 
 # Image/Video processing (for appearance asset validation)
 Pillow>=10.0.0
