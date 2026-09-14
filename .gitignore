@@ -24,7 +24,8 @@ avatar-frontend/node_modules/
 *.local
 
 # ---- AI model weights (large; download separately per SETUP.md) ----
-models/
+# NOTE: do NOT ignore the top-level `models/` Python package (models/schemas.py).
+# Model weights live under MODEL_DIR (ai-avatar-output/models/), covered below.
 *.pth
 *.ckpt
 *.onnx
