@@ -6,6 +6,9 @@ requires-python = ">=3.10"
 
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
+# Ensure the project root is importable so `from core ...`, `from models ...`
+# resolve during collection regardless of the runner's working directory.
+pythonpath = ["."]
 testpaths = ["tests"]
 markers = [
     "property: Property-based tests using Hypothesis",
