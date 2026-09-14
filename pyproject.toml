@@ -8,7 +8,10 @@ requires-python = ">=3.10"
 asyncio_mode = "auto"
 # Ensure the project root is importable so `from core ...`, `from models ...`
 # resolve during collection regardless of the runner's working directory.
+# `prepend` import mode (the classic default) puts rootdir on sys.path;
+# pytest 9 switched the default to `importlib`, which broke these imports on CI.
 pythonpath = ["."]
+addopts = "--import-mode=prepend"
 testpaths = ["tests"]
 markers = [
     "property: Property-based tests using Hypothesis",
