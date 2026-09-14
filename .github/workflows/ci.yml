@@ -30,7 +30,11 @@ jobs:
       - name: Run tests
         # GPU-only end-to-end tests are skip-gated behind AVATAR_GPU_E2E,
         # so the full avatar suite is safe to run on CPU runners.
-        run: python -m pytest tests/avatar/ -q
+        # PYTHONPATH + prepend import mode guarantee `from models`/`from core`
+        # resolve on pytest 9 (whose default importlib mode broke bare imports).
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+        run: python -m pytest tests/avatar/ -q --import-mode=prepend
 
   frontend:
     name: Frontend tests (vitest)
